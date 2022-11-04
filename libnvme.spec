@@ -1,23 +1,21 @@
-%define rel 1
 %define major	1
 %define libname %mklibname nvme%major
 %define devname %mklibname nvme -d 
 
 Name:		libnvme
 Version:	1.2
-Release:	%mkrel %{rel}
+Release:	1
 Summary:	Native NVMe device management library
 Group:		System/Kernel and hardware
 License:	GPLv2+
 URL:		https://github.com/linux-nvme/libnvme
-Source0:	https://github.com/linux-nvme/%{name}/archive/v%{version}/%{name}-%{version}.tar.gz
-BuildRequires:	meson >= 0.47.0
+Source0:	https://github.com/linux-nvme/libnvme/archive/v%{version}/%{name}-%{version}.tar.gz
+BuildRequires:	meson
 BuildRequires:	pkgconfig(json-c)
 BuildRequires:	pkgconfig(openssl)
 BuildRequires:	pkgconfig(python)
 BuildRequires:	pkgconfig(uuid)
-# To fix: for python bindings swig is required (actually doesn't work, is it broken our swig package?)
-#BuildRequires:	swig
+BuildRequires:	swig
 
 %package -n %{libname}
 Summary:	Native NVMe device management library
@@ -26,9 +24,9 @@ Group:		System/Libraries
 %package -n %{devname}
 Summary:	Development libraries for libnvme
 Group:		Development/C
-Provides:	nvme-devel = %{version}-%{release}
-Provides:	%{libname}-devel = %{version}-%{release}
-Requires:	%{libname} = %{version}-%{release}
+Provides:	nvme-devel = %{EVRD}
+Provides:	%{libname}-devel = %{EVRD}
+Requires:	%{libname} = %{EVRD}
 
 %description
 A library for accessing to NVMe under linux.
