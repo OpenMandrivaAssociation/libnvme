@@ -15,7 +15,8 @@ BuildRequires:	pkgconfig(json-c)
 BuildRequires:	pkgconfig(openssl)
 BuildRequires:	pkgconfig(python)
 BuildRequires:	pkgconfig(uuid)
-BuildRequires:	swig
+# Disable swig as it cause problems with undefined symbol: _Py_Dealloc
+#BuildRequires:	swig
 
 %package -n %{libname}
 Summary:	Native NVMe device management library
