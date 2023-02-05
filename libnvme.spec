@@ -3,7 +3,7 @@
 %define devname %mklibname nvme -d 
 
 Name:		libnvme
-Version:	1.2
+Version:	1.3
 Release:	1
 Summary:	Native NVMe device management library
 Group:		System/Kernel and hardware
@@ -11,6 +11,8 @@ License:	GPLv2+
 URL:		https://github.com/linux-nvme/libnvme
 Source0:	https://github.com/linux-nvme/libnvme/archive/v%{version}/%{name}-%{version}.tar.gz
 BuildRequires:	meson
+BuildRequires:  cmake
+BuildRequires:	pkgconfig(dbus-1)
 BuildRequires:	pkgconfig(json-c)
 BuildRequires:	pkgconfig(openssl)
 BuildRequires:	pkgconfig(python)
