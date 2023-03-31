@@ -4,7 +4,7 @@
 
 Name:		libnvme
 Version:	1.3
-Release:	1
+Release:	2
 Summary:	Native NVMe device management library
 Group:		System/Kernel and hardware
 License:	GPLv2+
