@@ -14,6 +14,7 @@ BuildRequires:	meson
 BuildRequires:  cmake
 BuildRequires:	pkgconfig(dbus-1)
 BuildRequires:	pkgconfig(json-c)
+BuildRequires:	pkgconfig(libkeyutils)
 BuildRequires:	pkgconfig(openssl)
 BuildRequires:	pkgconfig(python)
 BuildRequires:	pkgconfig(uuid)
