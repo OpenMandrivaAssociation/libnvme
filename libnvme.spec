@@ -17,6 +17,8 @@ BuildRequires:	pkgconfig(json-c)
 BuildRequires:	pkgconfig(libkeyutils)
 BuildRequires:	pkgconfig(openssl)
 BuildRequires:	pkgconfig(python)
+BuildRequires:	python3dist(pip)
+BuildRequires:	python3dist(wheel)
 BuildRequires:	pkgconfig(uuid)
 # Disable swig as it cause problems with undefined symbol: _Py_Dealloc
 BuildRequires:	swig
