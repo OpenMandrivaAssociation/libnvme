@@ -52,7 +52,7 @@ library.
 %meson \
 	-Ddocs=man \
 	-Ddocs-build=true \
- 	-Dpython=disable
+ 	-Dpython=disabled
 %meson_build
 
 %install
