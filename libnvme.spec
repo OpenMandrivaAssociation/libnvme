@@ -3,7 +3,7 @@
 %define devname %mklibname nvme -d 
 
 Name:		libnvme
-Version:	1.4
+Version:	1.5
 Release:	1
 Summary:	Native NVMe device management library
 Group:		System/Kernel and hardware
@@ -17,6 +17,8 @@ BuildRequires:	pkgconfig(json-c)
 BuildRequires:	pkgconfig(libkeyutils)
 BuildRequires:	pkgconfig(openssl)
 BuildRequires:	pkgconfig(python)
+BuildRequires:	python3dist(pip)
+BuildRequires:	python3dist(wheel)
 BuildRequires:	pkgconfig(uuid)
 # Disable swig as it cause problems with undefined symbol: _Py_Dealloc
 BuildRequires:	swig
@@ -50,6 +52,7 @@ library.
 %meson \
 	-Ddocs=man \
 	-Ddocs-build=true \
+ 	-Dpython=disabled
 %meson_build
 
 %install
