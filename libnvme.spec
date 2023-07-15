@@ -52,6 +52,7 @@ library.
 %meson \
 	-Ddocs=man \
 	-Ddocs-build=true \
+ 	-Dpython=disable
 %meson_build
 
 %install
