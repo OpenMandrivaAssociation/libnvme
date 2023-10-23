@@ -1,3 +1,5 @@
+%global build_ldflags %{build_ldflags} -Wl,--undefined-version
+
 %define major	1
 %define libname %mklibname nvme%major
 %define devname %mklibname nvme -d 
