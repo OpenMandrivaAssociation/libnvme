@@ -3,7 +3,7 @@
 %define devname %mklibname nvme -d 
 
 Name:		libnvme
-Version:	1.5
+Version:	1.6
 Release:	1
 Summary:	Native NVMe device management library
 Group:		System/Kernel and hardware
