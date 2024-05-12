@@ -1,11 +1,12 @@
 %global build_ldflags %{build_ldflags} -Wl,--undefined-version
 
 %define major	1
-%define libname %mklibname nvme%major
+%define libname %mklibname nvme
+%define oldlibname %mklibname nvme1
 %define devname %mklibname nvme -d 
 
 Name:		libnvme
-Version:	1.8
+Version:	1.9
 Release:	1
 Summary:	Native NVMe device management library
 Group:		System/Kernel and hardware
@@ -28,6 +29,7 @@ BuildRequires:	swig
 %package -n %{libname}
 Summary:	Native NVMe device management library
 Group:		System/Libraries
+%rename %{oldlibname}
 
 %package -n %{devname}
 Summary:	Development libraries for libnvme
