@@ -18,6 +18,7 @@ BuildRequires:  cmake
 BuildRequires:	pkgconfig(dbus-1)
 BuildRequires:	pkgconfig(json-c)
 BuildRequires:	pkgconfig(libkeyutils)
+BuildRequires:	pkgconfig(liburing)
 BuildRequires:	pkgconfig(openssl)
 BuildRequires:	pkgconfig(python)
 BuildRequires:	python3dist(pip)
